@@ -1,4 +1,4 @@
-create a python file called run-sql with the following content, changing the server and database variables at the top to those created earlier in the process.
+create a python file called run-sql with the contents below, changing the server and database variables at the top to those created earlier in the process.
 If you were not asked ot create them then leave them as is
 
 also update the deploy.sh file to add this:
@@ -8,6 +8,14 @@ pip3 install --quiet pyodbc azure-identity
 
 # Run the Python script
 python3 run-sql.py
+
+also create a file called script.sql and put the following changing mid-test to the user assigned managed identity you created earlier or leave as is if 
+you were not asked ot create any user assigned managed identity:
+
+CREATE USER [mid-test] FROM EXTERNAL PROVIDER;
+ALTER ROLE db_datareader ADD MEMBER [mid-test];
+ALTER ROLE db_datawriter ADD MEMBER [mid-test];
+
 
 Python file contents:
 
