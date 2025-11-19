@@ -1,0 +1,40 @@
+# Build artifacts
+bin/
+obj/
+publish/
+ExpenseApp/app/
+
+# User-specific files
+*.user
+*.suo
+*.userosstate
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# NOTE: .zip files are INCLUDED (not ignored) as per requirements
+# to allow app.zip to be committed to the repository
